@@ -1,14 +1,6 @@
 import "../css/Navbar.css";
-import {
-  Navbar,
-  Nav,
-  Button,
-  Container,
-  Form,
-  InputGroup,
-  Dropdown,
-} from "react-bootstrap";
-import { FaSearch, FaUserCircle } from "react-icons/fa";
+import { Navbar, Nav, Container, Dropdown } from "react-bootstrap";
+import { FaUserCircle } from "react-icons/fa";
 
 const MyNavbar = () => {
   const scrollToSection = (sectionId: any) => {

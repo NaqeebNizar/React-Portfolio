@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Container, Form, Button, Row, Col, Alert } from "react-bootstrap";
 import { FaUser, FaEnvelope, FaComment, FaPaperPlane } from "react-icons/fa";
 import "../css/ContactForm.css";
-import { HiOutlinePaperAirplane } from "react-icons/hi2";
 import { FiSend } from "react-icons/fi";
 
 interface FormData {
@@ -60,7 +59,7 @@ const ContactForm = () => {
     if (validateForm()) {
       // Here you would typically send the form data to your backend
       console.log("Form submitted:", formData);
-      // setSubmitted(true);
+      setSubmitted(true);
       // setFormData({ name: "", email: "", subject: "", message: "" });
       // setTimeout(() => setSubmitted(false), 5000);
     }

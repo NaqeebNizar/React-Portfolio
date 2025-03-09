@@ -2,7 +2,6 @@ import { Card, Container, Row, Col, Button } from "react-bootstrap";
 import {
   FaBuilding,
   FaExternalLinkAlt,
-  FaGithub,
   FaTools,
   FaUserTie,
 } from "react-icons/fa";

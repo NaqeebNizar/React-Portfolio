@@ -12,11 +12,11 @@ import {
 import { SiNestjs, SiTypescript } from "react-icons/si";
 import HomeImage from "../assets/Images/Naqeeb.png";
 import { IconType } from "react-icons";
-import { TechStackItem } from "../types/Types";
+import { TechStackItemType } from "../types/Types";
 import "../css/Home.css";
 
 const Home = () => {
-  const techStack: TechStackItem[] = [
+  const techStack: TechStackItemType[] = [
     [FaReact as IconType, "#90CAF9", "React"],
     [FaJs as IconType, "#F0DB4F", "JavaScript"],
     [SiTypescript as IconType, "#3178C6", "TypeScript"],
