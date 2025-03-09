@@ -1,0 +1,27 @@
+/* Navbar Styles */
+.navbar-dark {
+  background: rgba(10, 25, 47, 255) !important;
+  /* border-bottom: 2px solid #2d2d2d; */
+}
+
+.dropdown-profile .dropdown-toggle::after {
+  display: none;
+}
+
+.navbar-dark .navbar-toggler {
+  box-shadow: none !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #343a40;
+    z-index: 1000;
+  }
+  .custom-nav {
+    background-color: #0a192f;
+  }
+}

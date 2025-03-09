@@ -1,0 +1,380 @@
+/* Experience css */
+.experience-section {
+  background: linear-gradient(135deg, #0a192f 0%, #0a1a2f 100%);
+  padding: 4rem 0;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.section-title .title-text {
+  position: relative;
+  z-index: 2;
+  padding: 0 1.5rem;
+  font-weight: 700;
+  color: #e6f1ff;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #0a192f 0%, #0a1a2f 100%);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: #2196f3;
+}
+
+.experience-card {
+  border: none;
+  border-radius: 15px;
+  background: rgba(25, 32, 45, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.15);
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  min-height: 350px;
+  overflow: visible;
+  position: relative;
+  margin-top: 30px;
+}
+
+.experience-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 30px rgba(33, 150, 243, 0.25);
+}
+
+.company-icon {
+  font-size: 2rem;
+  color: #2196f3;
+  margin-bottom: 1rem;
+}
+
+.company-name {
+  font-weight: 700;
+  color: #e6f1ff;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.position-title {
+  color: #90caf9 !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.timeline-badge {
+  background: #2196f3;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(33, 150, 243, 0.4);
+  white-space: nowrap;
+}
+
+.responsibilities-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1.5rem;
+}
+
+.responsibilities-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #ccd6f6;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.bullet-point {
+  color: #90caf9;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/* Mobile First Adjustments */
+@media (max-width: 767.98px) {
+  .experience-section {
+    padding: 2rem 0;
+  }
+
+  .section-title .title-text {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .company-name {
+    padding-right: 40%;
+    /* font-size: 1.3rem; */
+  }
+
+  .position-title {
+    font-size: 1rem;
+  }
+
+  .timeline-badge {
+    top: -12px;
+    right: 15px;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    transform: skew(-8deg);
+  }
+
+  .responsibilities-list li {
+    font-size: 0.95rem;
+    padding-left: 1rem;
+  }
+
+  .card-header {
+    margin-bottom: 1.5rem !important;
+  }
+  .project-image img {
+    height: 160px;
+  }
+}
+
+/* Small Mobile Screens (≤ 576px) */
+@media (max-width: 576px) {
+  .company-name {
+    padding-right: 45%;
+    font-size: 1.1rem;
+  }
+
+  .position-title {
+    font-size: 0.95rem;
+  }
+
+  .timeline-badge {
+    top: -15px;
+    right: -10px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    transform: skew(-5deg);
+  }
+
+  .responsibilities-list li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+/* Tablet and Desktop Adjustments */
+@media (min-width: 768px) {
+  .experience-card {
+    margin-bottom: 0;
+  }
+
+  .company-name {
+    font-size: 1.5rem;
+  }
+
+  .position-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-badge {
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    background: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+    z-index: 2;
+    transform: skew(-10deg);
+  }
+
+  .responsibilities-list li {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+}
+
+/* Large Desktop Screens (≥ 1200px) */
+@media (min-width: 1200px) {
+  .section-title .title-text {
+    font-size: 3rem;
+  }
+
+  .experience-card {
+    min-height: 400px;
+  }
+}
+
+/* Layout Adjustments for Card Header */
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.d-flex.justify-content-between {
+  align-items: flex-start;
+}
+
+@media (max-width: 435px) {
+  .experience-card {
+    margin-bottom: 0;
+  }
+
+  .company-name {
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+  }
+
+  .position-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-badge {
+    position: absolute;
+    top: -20px;
+    right: -5px;
+    background: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+    z-index: 2;
+    transform: skew(-10deg);
+  }
+
+  .responsibilities-list li {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+}
+
+/* Project Cards Styles */
+.project-card {
+  border-radius: 15px;
+  background: rgba(25, 32, 45, 0.95);
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  transition: all 0.3s ease;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(33, 150, 243, 0.2);
+}
+
+.project-header {
+  border-bottom: 1px solid rgba(33, 150, 243, 0.3);
+  padding-bottom: 1rem;
+}
+
+.project-title {
+  color: #e6f1ff !important;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.tech-stack {
+  color: #90caf9;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.project-description {
+  color: #ccd6f6;
+  font-size: 1rem;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.project-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-outline-primary {
+  border-color: #2196f3;
+  color: #2196f3;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+.btn-outline-info {
+  border-color: #90caf9;
+  color: #90caf9;
+}
+
+.btn-outline-info:hover {
+  background-color: #90caf9;
+  border-color: #90caf9;
+  color: #0a192f;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1.4rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-card {
+    min-height: 350px;
+  }
+}
+
+/* Project Image Styles */
+.project-image {
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: translateY(-3px);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}

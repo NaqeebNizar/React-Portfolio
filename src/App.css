@@ -1,0 +1,30 @@
+/* App.css */
+/* Global Styles */
+.portfolio-theme {
+  --primary-dark: #0a0a0a;
+  --secondary-dark: #1a1a1a;
+  --accent-cyan: #00ffe5;
+  --accent-purple: #7b61ff;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+}
+
+:root {
+  --primary-blue: #2a5ee8;
+  --light-blue: #e3f2fd;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height, 70px);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--primary-dark);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+}

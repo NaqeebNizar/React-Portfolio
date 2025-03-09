@@ -1,0 +1,67 @@
+.contact-link {
+  color: #207ad4;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Base social icon style */
+.social-icon {
+  color: #f0f4f8; /* Default light color */
+  transition: all 0.3s ease;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* GitHub specific */
+.github-icon {
+  color: #181717;
+}
+
+.github-icon:hover {
+  color: #201f1f;
+}
+
+/* Instagram specific */
+.instagram-icon {
+  color: #c13584;
+}
+
+.instagram-icon:hover {
+  color: #cb388b;
+}
+
+/* LinkedIn specific */
+.linkedin-icon {
+  color: #0a66c2;
+}
+
+.linkedin-icon:hover {
+  color: #0e46be;
+}
+.facebook-icon {
+  color: #1877f2; /* Facebook brand blue */
+}
+
+.facebook-icon:hover {
+  color: #0e46be; /* Darker Facebook blue */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 767px) {
+  .footer-col {
+    margin-bottom: 1.5rem;
+  }
+
+  .nav.flex-column {
+    align-items: center !important;
+  }
+
+  .social-icons {
+    justify-content: center !important;
+  }
+}
