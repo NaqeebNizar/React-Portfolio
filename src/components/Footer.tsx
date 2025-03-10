@@ -8,6 +8,12 @@ import {
 } from "react-bootstrap-icons";
 import "../css/Footer.css";
 const Footer = () => {
+  const scrollToSection = (sectionId: any) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section
       style={{
@@ -34,14 +40,14 @@ const Footer = () => {
             <h5 style={{ color: "#a9d6e5" }}>Quick Links</h5>
             {/* Add justify-content-center for mobile */}
             <Nav className="flex-column mt-3 justify-content-center justify-content-md-start">
-              <Nav.Link href="#about" style={{ color: "#f0f4f8" }}>
-                About Us
+              <Nav.Link onClick={() => scrollToSection("home")} style={{ color: "#f0f4f8" }}>
+                Home
               </Nav.Link>
-              <Nav.Link href="#services" style={{ color: "#f0f4f8" }}>
-                Services
+              <Nav.Link onClick={() => scrollToSection("experience")} style={{ color: "#f0f4f8" }}>
+                Experience
               </Nav.Link>
-              <Nav.Link href="#careers" style={{ color: "#f0f4f8" }}>
-                Careers
+              <Nav.Link onClick={() => scrollToSection("contact")} style={{ color: "#f0f4f8" }}>
+                Contact
               </Nav.Link>
             </Nav>
           </Col>

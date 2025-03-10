@@ -16,6 +16,7 @@ const MyNavbar = () => {
           <Navbar.Brand
             className="me-3 cursor-pointer"
             onClick={() => scrollToSection("home")}
+            href="#home"
           >
             MyPortfolio
           </Navbar.Brand>
@@ -27,7 +28,7 @@ const MyNavbar = () => {
             <Nav.Link onClick={() => scrollToSection("experience")}>
               Experience
             </Nav.Link>
-            <Nav.Link onClick={() => scrollToSection("contact-form")}>
+            <Nav.Link onClick={() => scrollToSection("contact")}>
               Contact
             </Nav.Link>
           </Nav>

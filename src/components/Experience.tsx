@@ -7,8 +7,8 @@ import {
 } from "react-icons/fa";
 import "../css/Experience.css";
 import { ExperienceType, ProjectType } from "../types/Types";
-import BRB from "../assets/Images/BRB.png";
-import Recruitica from "../assets/Images/image.png";
+import Recruitica from "../assets/Images/Recruitica.png";
+import MarketingTools from "../assets/Images/MarketingTools.png";
 
 const experiences: ExperienceType[] = [
   /* keep your existing data */
@@ -23,7 +23,6 @@ const experiences: ExperienceType[] = [
       "Created and added new features in an existing project/product.",
       "Contributed to the enhancement and optimization of existing features.",
     ],
-    image: BRB,
   },
   {
     id: 2,
@@ -57,15 +56,16 @@ const projects: ProjectType[] = [
     codeUrl: "#",
     image: `${Recruitica}`,
   },
-  // {
-  //   id: 2,
-  //   title: "Real-Time Collaboration Platform",
-  //   description:
-  //     "Web-based whiteboard with real-time multi-user collaboration features.",
-  //   technologies: ["WebSocket", "React", "TypeScript", "Canvas API"],
-  //   demoUrl: "#",
-  //   codeUrl: "#",
-  // },
+  {
+    id: 2,
+    title: "Marketing Tools",
+    description:
+      "I have worked with Django on the backend, utilizing Python to create REST APIs using the Django Rest Framework. I also managed the databases with Django ORM to ensure smooth data operations and seamless interactions between the front-end and back-end.",
+    technologies: ["React", "Python", "Django", "PostgreSQL"],
+    demoUrl: "https://aimarketing.brbtechnologies.pk/",
+    codeUrl: "#",
+    image: MarketingTools,
+  },
 ];
 
 const Experience = () => {

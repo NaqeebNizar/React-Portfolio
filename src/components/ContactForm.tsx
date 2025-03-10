@@ -1,21 +1,17 @@
 import { useState } from "react";
-import { Container, Form, Button, Row, Col, Alert } from "react-bootstrap";
+import {
+  Container,
+  Form,
+  Button,
+  Row,
+  Col,
+  Alert,
+  Modal,
+} from "react-bootstrap";
 import { FaUser, FaEnvelope, FaComment, FaPaperPlane } from "react-icons/fa";
 import "../css/ContactForm.css";
 import { FiSend } from "react-icons/fi";
-
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
-
-interface FormErrors {
-  name?: string;
-  email?: string;
-  message?: string;
-}
+import { FormData, FormErrors } from "../types/Types";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -27,6 +23,7 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
   const validateForm = (): boolean => {
     let valid = true;
@@ -60,8 +57,8 @@ const ContactForm = () => {
       // Here you would typically send the form data to your backend
       console.log("Form submitted:", formData);
       setSubmitted(true);
-      // setFormData({ name: "", email: "", subject: "", message: "" });
-      // setTimeout(() => setSubmitted(false), 5000);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+      setTimeout(() => setSubmitted(false), 5000);
     }
   };
 
@@ -85,11 +82,49 @@ const ContactForm = () => {
 
         {/* <h2 className="title-text text-center mb-5 text-white"></h2> */}
 
+        <Modal
+          show={submitted}
+          onHide={() => setSubmitted(false)}
+          backdrop="static"
+          keyboard={false}
+          centered
+          className="custom-modal"
+        >
+          <Modal.Header
+            closeButton
+            className="modal-header-custom"
+            closeVariant="white"
+          >
+            <Modal.Title className="text-white">
+              <FaPaperPlane className="me-2" style={{ color: "#2196F3" }} />
+              Message Sent!
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body className="modal-body-custom">
+            <div className="text-center">
+              <FiSend size={40} className="mb-3" style={{ color: "#2196F3" }} />
+              <p className="text-white mb-0">
+                Your message has been successfully submitted. We'll get back to
+                you soon!
+              </p>
+            </div>
+          </Modal.Body>
+          <Modal.Footer className="modal-footer-custom">
+            <Button
+              variant="primary"
+              onClick={() => setSubmitted(false)}
+              className="submit-btn rounded-4"
+            >
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        {/* 
         {submitted && (
           <Alert variant="success" className="text-center">
             Your message has been sent successfully!
           </Alert>
-        )}
+        )} */}
 
         <Form onSubmit={handleSubmit} className="p-4 rounded-4 form-container">
           <Row className="g-4">

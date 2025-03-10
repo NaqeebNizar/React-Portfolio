@@ -78,3 +78,37 @@
   color: #ef9a9a !important;
   font-size: 0.9em;
 }
+
+/* Custom Modal Styles */
+.custom-modal .modal-content {
+  background-color: #112240;
+  border: 1px solid #233554;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.modal-header-custom {
+  border-bottom: 1px solid #233554 !important;
+  padding: 1.5rem;
+}
+
+.modal-body-custom {
+  padding: 2rem;
+  background-color: #0a192f;
+}
+
+.modal-footer-custom {
+  border-top: 1px solid #233554 !important;
+  padding: 1.5rem;
+  justify-content: center;
+}
+
+.custom-modal .btn-close {
+  filter: invert(1) brightness(200%);
+}
+
+.custom-modal .modal-title {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}

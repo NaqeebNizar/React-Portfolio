@@ -21,3 +21,16 @@ export interface ProjectType {
     codeUrl: string;
     image?: string;
 }
+
+export interface FormData {
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+}
+
+export interface FormErrors {
+    name?: string;
+    email?: string;
+    message?: string;
+}

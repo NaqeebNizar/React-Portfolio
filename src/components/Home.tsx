@@ -9,7 +9,7 @@ import {
   FaJs,
   FaPython,
 } from "react-icons/fa";
-import { SiNestjs, SiTypescript } from "react-icons/si";
+import { SiNestjs, SiPostgresql, SiTypescript } from "react-icons/si";
 import HomeImage from "../assets/Images/Naqeeb.png";
 import { IconType } from "react-icons";
 import { TechStackItemType } from "../types/Types";
@@ -23,6 +23,7 @@ const Home = () => {
     [FaNodeJs as IconType, "#339933", "NodeJS"],
     [SiNestjs as IconType, "#E0234E", "NestJS"],
     [FaPython as IconType, "#4B8BBE", "Python"],
+    [SiPostgresql as IconType, "#2979B5", "PostgreSQL"],
   ];
   return (
     <section id="home" className="portfolio-section">
@@ -63,7 +64,7 @@ const Home = () => {
                   <div className="tech-stack d-flex justify-content-center flex-wrap">
                     {techStack.map(([Icon, color, text], index) => (
                       <div key={index} className="tech-item">
-                        <Icon className="pulse" color={color} />
+                        <Icon className="pulse" size={20} color={color} />
                         <span className="tech-text">{text}</span>
                       </div>
                     ))}
@@ -71,10 +72,15 @@ const Home = () => {
                 </p>
 
                 <div className="d-flex flex-column flex-md-row gap-3 button-group justify-content-center">
-                  <Button variant="primary" size="lg" className="btn-gradient">
+                  <Button
+                    variant="primary"
+                    href="#experience"
+                    size="lg"
+                    className="btn-gradient"
+                  >
                     View My Work <FaArrowRight className="ms-2" />
                   </Button>
-                  <Button variant="outline-light" size="lg">
+                  <Button variant="outline-light" href="#contact" size="lg">
                     Contact Me <FaPaperPlane className="ms-2" />
                   </Button>
                 </div>
