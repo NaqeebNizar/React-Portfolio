@@ -5,7 +5,6 @@ import {
   Button,
   Row,
   Col,
-  Alert,
   Modal,
 } from "react-bootstrap";
 import { FaUser, FaEnvelope, FaComment, FaPaperPlane } from "react-icons/fa";
@@ -23,7 +22,6 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
-  const [openModal, setOpenModal] = useState(false);
 
   const validateForm = (): boolean => {
     let valid = true;

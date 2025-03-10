@@ -40,13 +40,22 @@ const Footer = () => {
             <h5 style={{ color: "#a9d6e5" }}>Quick Links</h5>
             {/* Add justify-content-center for mobile */}
             <Nav className="flex-column mt-3 justify-content-center justify-content-md-start">
-              <Nav.Link onClick={() => scrollToSection("home")} style={{ color: "#f0f4f8" }}>
+              <Nav.Link
+                onClick={() => scrollToSection("home")}
+                style={{ color: "#f0f4f8" }}
+              >
                 Home
               </Nav.Link>
-              <Nav.Link onClick={() => scrollToSection("experience")} style={{ color: "#f0f4f8" }}>
+              <Nav.Link
+                onClick={() => scrollToSection("experience")}
+                style={{ color: "#f0f4f8" }}
+              >
                 Experience
               </Nav.Link>
-              <Nav.Link onClick={() => scrollToSection("contact")} style={{ color: "#f0f4f8" }}>
+              <Nav.Link
+                onClick={() => scrollToSection("contact")}
+                style={{ color: "#f0f4f8" }}
+              >
                 Contact
               </Nav.Link>
             </Nav>
@@ -57,10 +66,10 @@ const Footer = () => {
             <div className="mt-3">
               {/* Add justify-content-center for email */}
               <div
-                className="d-flex justify-content-center justify-content-md-start"
+                className="email-container d-flex align-items-center justify-content-center justify-content-md-start"
                 style={{ fontSize: "0.9rem", whiteSpace: "nowrap" }}
               >
-                <Envelope className="me-2" />
+                <Envelope className="me-2" style={{ marginTop: "2px" }} />
                 <a
                   href="https://mail.google.com/mail/?view=cm&to=naqeebmaknojia895@gmail.com"
                   className="contact-link"
