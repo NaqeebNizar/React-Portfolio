@@ -22,11 +22,12 @@ export interface ProjectType {
     image?: string;
 }
 
-export interface FormData {
+export interface ContactFormValues {
     name: string;
     email: string;
     subject: string;
     message: string;
+    [key: string]: unknown;
 }
 
 export interface FormErrors {

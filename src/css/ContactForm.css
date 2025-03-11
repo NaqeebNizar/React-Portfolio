@@ -68,6 +68,56 @@
   transform: translateY(-2px);
 }
 
+/* Bounce animation for icon */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.send-icon.animate {
+  animation: bounce 0.8s infinite;
+}
+
+/* Button pulse effect */
+.submit-btn.submitting {
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn.submitting::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  100% {
+    left: 100%;
+  }
+}
+
+/* Disabled state styling */
+.submit-btn:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
 .form-label {
   color: #90caf9 !important;
   font-weight: 400 !important;

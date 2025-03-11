@@ -1,19 +1,13 @@
-import { useState } from "react";
-import {
-  Container,
-  Form,
-  Button,
-  Row,
-  Col,
-  Modal,
-} from "react-bootstrap";
+import { useEffect, useState } from "react";
+import { Container, Form, Button, Row, Col, Modal } from "react-bootstrap";
 import { FaUser, FaEnvelope, FaComment, FaPaperPlane } from "react-icons/fa";
 import "../css/ContactForm.css";
 import { FiSend } from "react-icons/fi";
-import { FormData, FormErrors } from "../types/Types";
+import { ContactFormValues, FormErrors } from "../types/Types";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<ContactFormValues>({
     name: "",
     email: "",
     subject: "",
@@ -22,6 +16,7 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateForm = (): boolean => {
     let valid = true;
@@ -49,16 +44,42 @@ const ContactForm = () => {
     return valid;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
-      // Here you would typically send the form data to your backend
-      console.log("Form submitted:", formData);
-      setSubmitted(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setSubmitted(false), 5000);
+      setIsSubmitting(true);
+      try {
+        const dynamicTemplateParams = {
+          to_name: "Naqeeb",
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        };
+
+        const response = await emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID,
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+          dynamicTemplateParams
+        );
+
+        console.log("Form submitted:", formData);
+        console.log("Email sent successfully:", response);
+        setSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSubmitted(false), 5000);
+      } catch (error) {
+        console.error("Error sending email");
+      } finally {
+        setIsSubmitting(false);
+      }
     }
+    return;
   };
+
+  useEffect(() => {
+    emailjs.init(import.meta.env.VITE_EMAILJS_USER_ID);
+  });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -211,10 +232,14 @@ const ContactForm = () => {
               <Button
                 variant="primary"
                 type="submit"
-                className="submit-btn rounded-4"
+                className={`submit-btn rounded-4 ${
+                  isSubmitting ? "submitting" : ""
+                }`}
               >
-                <FiSend className="send-icon" />
-                Send Message
+                <FiSend
+                  className={`send-icon ${isSubmitting ? "animate" : ""}`}
+                />
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </Col>
           </Row>
