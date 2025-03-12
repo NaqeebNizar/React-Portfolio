@@ -57,6 +57,57 @@
   font-weight: 500;
 }
 
+.text-gradient-blue {
+  background: linear-gradient(45deg, #2196f3, #90caf9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-light-blue {
+  color: #90caf9 !important;
+}
+
+.btn-gradient {
+  background: linear-gradient(45deg, #2196f3, #1976d2);
+  border: none;
+  color: #e3f2fd !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light {
+  border-color: #90caf9;
+  color: #90caf9 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(144, 202, 249, 0.15);
+  border-color: #2196f3;
+}
+
+.btn-outline-cv {
+  border: 1px solid #2196f3 !important;
+  color: #2196f3 !important;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-cv:hover {
+  background: rgba(33, 150, 243, 0.25) !important;
+  border-color: #1976d2 !important;
+  color: #e3f2fd !important;
+}
+
+/* Ensure buttons maintain proper spacing */
+.button-group {
+  flex-wrap: wrap;
+}
+
+.react-type-animation::after {
+  background-color: #90caf9 !important;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 767.98px) {
   .portfolio-section {
@@ -115,38 +166,4 @@
   .text-col {
     order: 1; /* Ensure text stays on left */
   }
-}
-
-.text-gradient-blue {
-  background: linear-gradient(45deg, #2196f3, #90caf9);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-}
-
-.text-light-blue {
-  color: #90caf9 !important;
-}
-
-.btn-gradient {
-  background: linear-gradient(45deg, #2196f3, #1976d2);
-  border: none;
-  color: #e3f2fd !important;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-light {
-  border-color: #90caf9;
-  color: #90caf9 !important;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-light:hover {
-  background: rgba(144, 202, 249, 0.15);
-  border-color: #2196f3;
-}
-
-.react-type-animation::after {
-  background-color: #90caf9 !important;
 }

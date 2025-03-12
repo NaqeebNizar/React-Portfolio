@@ -14,6 +14,8 @@ import HomeImage from "../assets/Images/Naqeeb.png";
 import { IconType } from "react-icons";
 import { TechStackItemType } from "../types/Types";
 import "../css/Home.css";
+import CV from "../assets/CV/Resume.pdf";
+import { FaDownload } from "react-icons/fa6";
 
 const Home = () => {
   const techStack: TechStackItemType[] = [
@@ -71,7 +73,7 @@ const Home = () => {
                   </div>
                 </p>
 
-                <div className="d-flex flex-column flex-md-row gap-3 button-group justify-content-center">
+                <div className="button-group d-flex flex-column flex-md-row gap-3 justify-content-center">
                   <Button
                     variant="primary"
                     href="#experience"
@@ -80,6 +82,18 @@ const Home = () => {
                   >
                     View My Work <FaArrowRight className="ms-2" />
                   </Button>
+
+                  <Button
+                    variant="outline-primary"
+                    href={CV}
+                    as="a"
+                    download
+                    size="lg"
+                    className="btn-outline-cv"
+                  >
+                    Download My CV <FaDownload className="ms-2" />
+                  </Button>
+
                   <Button variant="outline-light" href="#contact" size="lg">
                     Contact Me <FaPaperPlane className="ms-2" />
                   </Button>

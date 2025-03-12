@@ -44,30 +44,6 @@ const MyNavbar = () => {
               Contact
             </Nav.Link>
           </Nav>
-          {/* <Form className="me-3">
-            <InputGroup>
-              <Form.Control
-                placeholder="Search..."
-                aria-label="Search"
-                className="border-end-0"
-              />
-              <Button variant="outline-light">
-                <FaSearch />
-              </Button>
-            </InputGroup>
-          </Form> */}
-
-          <Dropdown className="me-3 dropdown-profile">
-            <Dropdown.Toggle variant="link" className="p-0">
-              <FaUserCircle size={40} />
-            </Dropdown.Toggle>
-            <Dropdown.Menu className="dropdown-menu-end">
-              <Dropdown.Item>Profile</Dropdown.Item>
-              <Dropdown.Item>Settings</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item>Logout</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
 
           <Navbar.Toggle
             aria-controls="mobile-nav"
