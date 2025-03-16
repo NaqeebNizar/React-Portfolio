@@ -1,11 +1,4 @@
-import {
-  Container,
-  Row,
-  Col,
-  Button,
-  Image,
-  ButtonProps,
-} from "react-bootstrap";
+import { Container, Row, Col, Button, ButtonProps } from "react-bootstrap";
 import { motion, MotionProps } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import {
@@ -17,7 +10,7 @@ import {
   FaPython,
 } from "react-icons/fa";
 import { SiNestjs, SiPostgresql, SiTypescript } from "react-icons/si";
-import Coding from "../assets/Images/coding2.jpeg";
+// import Coding from "../assets/Images/coding2.jpeg";
 import { IconType } from "react-icons";
 import { TechStackItemType } from "../types/Types";
 import "../css/Home.css";
