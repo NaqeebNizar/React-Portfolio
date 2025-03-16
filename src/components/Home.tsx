@@ -169,7 +169,7 @@ const Home = () => {
             </div>
           </Col>
 
-          <Col lg={6} className="order-md-2 d-none d-lg-block image-col">
+          {/* <Col lg={6} className="order-md-2 d-none d-lg-block image-col">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -182,7 +182,7 @@ const Home = () => {
                 className="profile-image img-fluid"
               />
             </motion.div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </section>
