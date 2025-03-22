@@ -16,6 +16,7 @@ import { TechStackItemType } from "../types/Types";
 import "../css/Home.css";
 import CV from "../assets/CV/Resume.pdf";
 import { FaDownload } from "react-icons/fa6";
+import { useState } from "react";
 
 type MotionButtonProps = ButtonProps &
   MotionProps &
@@ -36,6 +37,8 @@ const Home = () => {
     [FaPython as IconType, "#4B8BBE", "Python"],
     [SiPostgresql as IconType, "#2979B5", "PostgreSQL"],
   ];
+
+  const [isTilted, setIsTilted] = useState(false);
 
   return (
     <section id="home" className="portfolio-section">
@@ -162,18 +165,107 @@ const Home = () => {
             </div>
           </Col>
 
-          {/* <Col lg={6} className="order-md-2 d-none d-lg-block image-col">
+          {/* <Col
+            lg={6}
+            className="order-md-2 d-none d-lg-block holographic-container"
+          >
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.4,
+                ease: [0.25, 0.1, 0.25, 1],
+              }}
+              className="cyber-circle-wrapper"
+              style={{ perspective: 1200 }}
             >
-              <Image
-                src={Coding}
-                alt="Naqeeb Nizar Ali"
-                fluid
-                className="profile-image img-fluid"
-              />
+              <motion.div
+                className="neon-orb"
+                animate={{
+                  rotateX: isTilted ? 60 : 0,
+                  translateZ: isTilted ? 60 : 0,
+                }}
+                transition={{
+                  type: "spring",
+                  damping: 12,
+                  stiffness: 100,
+                  duration: 0.8,
+                }}
+                onClick={() => setIsTilted(!isTilted)}
+                style={{
+                  transformStyle: "preserve-3d",
+                  cursor: "pointer",
+                }}
+              >
+                <motion.div
+                  className="quantum-glow"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: isTilted ? 1 : 0,
+                    y: isTilted ? -120 : 0,
+                    rotateX: isTilted ? -60 : 0,
+                    scale: isTilted ? 2.5 : 1,
+                    filter: isTilted ? `blur(80px)` : `blur(20px)`,
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    ease: [0.33, 1, 0.68, 1],
+                  }}
+                  style={{
+                    transformOrigin: "bottom center",
+                  }}
+                />
+
+                <motion.div
+                  className="core-beam"
+                  animate={{
+                    opacity: isTilted ? 0.9 : 0,
+                    height: isTilted ? "400px" : "0px",
+                    y: isTilted ? -280 : 0,
+                  }}
+                  transition={{ duration: 0.4, delay: 0.1 }}
+                />
+
+                <motion.div
+                  className="particle-burst"
+                  animate={{
+                    scale: isTilted ? 1.2 : 0,
+                    opacity: isTilted ? 0.6 : 0,
+                  }}
+                  transition={{ type: "spring", velocity: 2 }}
+                />
+
+                <motion.div
+                  className="orb-interface"
+                  animate={{
+                    rotateX: isTilted ? -60 : 0,
+                    filter: isTilted ? "brightness(1.4)" : "brightness(1)",
+                  }}
+                  transition={{
+                    type: "tween",
+                    duration: 0.6,
+                    ease: [0.76, 0, 0.24, 1],
+                  }}
+                >
+                  <span className="hud-text">
+                    {isTilted ? (
+                      <motion.span initial={{ y: 20 }} animate={{ y: 0 }}>
+                        ▼
+                      </motion.span>
+                    ) : (
+                      <motion.span
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                      >
+                        ENGAGE
+                      </motion.span>
+                    )}
+                  </span>
+                </motion.div>
+
+                <div className="orb-depth-layer" />
+              </motion.div>
             </motion.div>
           </Col> */}
         </Row>
