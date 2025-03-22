@@ -16,7 +16,7 @@ import { TechStackItemType } from "../types/Types";
 import "../css/Home.css";
 import CV from "../assets/CV/Resume.pdf";
 import { FaDownload } from "react-icons/fa6";
-import { useState } from "react";
+// import { useState } from "react";
 
 type MotionButtonProps = ButtonProps &
   MotionProps &
@@ -38,7 +38,7 @@ const Home = () => {
     [SiPostgresql as IconType, "#2979B5", "PostgreSQL"],
   ];
 
-  const [isTilted, setIsTilted] = useState(false);
+  // const [isTilted, setIsTilted] = useState(false);
 
   return (
     <section id="home" className="portfolio-section">
