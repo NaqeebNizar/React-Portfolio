@@ -56,16 +56,6 @@ const projects: ProjectType[] = [
     codeUrl: "#",
     image: `${Recruitica}`,
   },
-  {
-    id: 2,
-    title: "Marketing Tools",
-    description:
-      "I have worked with Django on the backend, utilizing Python to create REST APIs using the Django Rest Framework. I also managed the databases with Django ORM to ensure smooth data operations and seamless interactions between the front-end and back-end.",
-    technologies: ["React", "Python", "Django", "PostgreSQL"],
-    demoUrl: "https://aimarketing.brbtechnologies.pk/",
-    codeUrl: "#",
-    image: MarketingTools,
-  },
 ];
 
 const Experience = () => {
