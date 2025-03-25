@@ -8,7 +8,6 @@ import {
 import "../css/Experience.css";
 import { ExperienceType, ProjectType } from "../types/Types";
 import Recruitica from "../assets/Images/Recruitica.png";
-import MarketingTools from "../assets/Images/MarketingTools.png";
 
 const experiences: ExperienceType[] = [
   /* keep your existing data */
