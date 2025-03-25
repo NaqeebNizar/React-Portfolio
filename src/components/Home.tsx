@@ -21,7 +21,7 @@ import { FaDownload } from "react-icons/fa6";
 type MotionButtonProps = ButtonProps &
   MotionProps &
   React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-    as?: "a"; // Force anchor type for these buttons
+    as?: "a";
   };
 
 // Create motion-enhanced button with proper typing
